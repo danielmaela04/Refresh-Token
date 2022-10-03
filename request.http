@@ -1,0 +1,8 @@
+POST http://localhost:4879/newuser
+Content-Type: application/json
+
+{
+    "name": "Daniel Maela",
+    "email": "daielmaela04@gmail.com",
+    "password": "danielmaela04"
+}

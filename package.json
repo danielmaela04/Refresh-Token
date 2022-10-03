@@ -1,13 +1,18 @@
 {
   "name": "refresh-token",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/server.js",
   "repository": "git@github.com:danielmaela04/Refresh-Token.git",
   "author": "daniel04 <danielmassuanganhe04@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "./src/server.js",
+    "dev": "nodemon ./src/server.js"
+  },
   "devDependencies": {},
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",

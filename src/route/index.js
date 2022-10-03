@@ -1,4 +1,8 @@
+const getUsers = require("./../utils/index")
+
 module.exports = (app) => {
+    getUsers(app);
+    
     app.get("/", (req, res) => {
         res.status(200).send({
             error: "false",

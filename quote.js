@@ -4,7 +4,7 @@ const db = require("./../config/db");
 module.exports = (app) => {
     app.post('/quotes', (req, res) => {
         const { quote, author } = req.body;
-        const uid = randomUUID()
+        const uid = randomUUID();
 
         const query = "INSERT INTO `quote` (`uid`, `quote`, `author`) VALUES (?,?,?)"
         return db.query(query, [uid, quote, author], (error) => {

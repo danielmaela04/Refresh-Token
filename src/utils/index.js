@@ -2,14 +2,13 @@ const { randomUUID } = require("crypto");
 const db = require("./../config/db");
 
 module.exports = (app) => {
-
     app.post("/newUser", (req, res) => {
         const { name, email, password } = req.body
         const uid = randomUUID();
 
         const query = "INSERT INTO `userdata` (`uid`, `name`, `email`, `password`) VALUES (?,?,?,?)"
 
-        db.query(query, [uid, name, email, password], (error) => {
+        db(query, [uid, name, email, password], (error) => {
             if(error){
                 console.error(error)
                 return res.status(500).send({

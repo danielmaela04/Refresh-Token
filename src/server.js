@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cors())
 
-require("./route/index")
+require("./route/index")(app);
 
 app.listen(port, () => {
     console.info(`The server is running on: http://localhost:${port}`)
